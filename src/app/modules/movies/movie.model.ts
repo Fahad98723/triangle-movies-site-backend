@@ -1,7 +1,8 @@
-import { Model, Schema, model } from 'mongoose';
-import { IMovie } from './movies.intereface';
-
-type MovieModel = Model<IMovie, object>;
+import { Schema, model } from 'mongoose';
+import { IMovie, MovieModel } from './movie.intereface';
+import { AllGenre } from '../../../shared/allGenre';
+import ApiError from '../../../errors/ApiError';
+import httpStatus from 'http-status';
 
 const movieSchema = new Schema<IMovie>(
   {
@@ -13,7 +14,7 @@ const movieSchema = new Schema<IMovie>(
     title: { type: String, required: true },
     overview: { type: String, required: true },
     release_date: { type: String, required: true },
-    genres: { type: [String], required: true },
+    genres: { type: [String], required: true, enum: AllGenre },
     runtime: { type: Number, required: true },
     poster: { type: String, required: true },
     cast: { type: [String], required: true },
@@ -28,5 +29,17 @@ const movieSchema = new Schema<IMovie>(
     timestamps: true,
   },
 );
+
+movieSchema.pre('save', async function (next) {
+  const isExist = await Movie.findOne({
+    title: this.title,
+    release_date: this.release_date,
+  });
+
+  if (isExist) {
+    throw new ApiError(httpStatus.CONFLICT, 'Movie Already Exist');
+  }
+  next();
+});
 
 export const Movie = model<IMovie, MovieModel>('Movie', movieSchema);

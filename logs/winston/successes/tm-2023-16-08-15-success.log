@@ -1,0 +1,36 @@
+{
+  message: '✨ Database is connected successfully',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-16T09:02:38.769Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-16T09:02:38.773Z'
+}
+{
+  message: '✨ Database is connected successfully',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-16T09:04:37.859Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-16T09:04:37.863Z'
+}
+{
+  message: '✨ Database is connected successfully',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-16T09:05:00.037Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-16T09:05:00.042Z'
+}

@@ -1,9 +1,34 @@
+import { Model } from 'mongoose';
+
 export type IMovie = {
   movieid: string;
   title: string;
   overview: string;
   release_date: string;
-  genres: string[]; // Array of genre names
+  genres: [
+    | 'Action'
+    | 'Adventure'
+    | 'Animation'
+    | 'Comedy'
+    | 'Crime'
+    | 'Drama'
+    | 'Fantasy'
+    | 'Horror'
+    | 'Mystery'
+    | 'Romance'
+    | 'Sci-Fi'
+    | 'Thriller'
+    | 'War'
+    | 'Western'
+    | 'Documentary'
+    | 'Reality'
+    | 'Talk Show'
+    | 'Sitcom'
+    | 'Superhero'
+    | 'Historical'
+    | 'Family'
+    | 'Music',
+  ]; // Array of genre names
   runtime: number; // Duration in minutes
   poster: string; // URL to the poster image
   cast: string[]; // Array of cast member names,
@@ -14,3 +39,5 @@ export type IMovie = {
   production_companies?: string[]; // Array of production company names
   production_countries: string[]; // Array of production country names
 };
+
+export type MovieModel = Model<IMovie, Record<string, unknown>>;

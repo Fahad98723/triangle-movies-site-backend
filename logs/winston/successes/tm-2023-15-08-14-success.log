@@ -1,0 +1,84 @@
+{
+  message: '✨ Database is connected successfully',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:05:22.866Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:05:22.871Z'
+}
+{
+  message: '✨ Database is connected successfully',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:06:36.714Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:06:36.719Z'
+}
+{
+  message: '✨ Database is connected successfully',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:07:51.411Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:07:51.416Z'
+}
+{
+  message: '✨ Database is connected successfully',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:09:33.412Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:09:33.416Z'
+}
+{
+  message: '✨ Database is connected successfully',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:10:13.862Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:10:13.868Z'
+}
+{
+  message: '✨ Database is connected successfully',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:11:46.983Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:11:46.987Z'
+}
+{
+  message: '✨ Database is connected successfully',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:12:25.812Z'
+}
+{
+  message: 'Application listening on port 5000',
+  level: 'info',
+  label: 'Triangle Movies 🎥',
+  timestamp: '2023-08-15T08:12:25.817Z'
+}

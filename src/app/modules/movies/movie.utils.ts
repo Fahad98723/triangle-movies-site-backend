@@ -1,4 +1,4 @@
-import { Movie } from './movies.model';
+import { Movie } from './movie.model';
 
 export const findLastMovieId = async () => {
   const lastMovie = await Movie.findOne({}, { movieid: 1, _id: 0 })

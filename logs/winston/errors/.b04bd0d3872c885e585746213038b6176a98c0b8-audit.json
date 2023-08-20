@@ -1,0 +1,85 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\.b04bd0d3872c885e585746213038b6176a98c0b8-audit.json",
+    "files": [
+        {
+            "date": 1692082004363,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-15-08-12-error.log",
+            "hash": "85e1d0792a8a5e2a5ade06f26597bb1c3eca33ecf491db06976e5e1e5d2a6333"
+        },
+        {
+            "date": 1692084861513,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-15-08-13-error.log",
+            "hash": "7d321ab6e934edf5c6c1f12a97e26bfefccd3f31b3fc3478ca81bb0f93373c44"
+        },
+        {
+            "date": 1692086719815,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-15-08-14-error.log",
+            "hash": "7f1c7b5ea417b09376a297af77f4783c22c0bf2ccfcf8af7f8325da6ca7a99b0"
+        },
+        {
+            "date": 1692166519379,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-16-08-12-error.log",
+            "hash": "873f6afefc18c44d86380c2462613d2e902e443e8686f5d05589cd566ea99b84"
+        },
+        {
+            "date": 1692170427183,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-16-08-13-error.log",
+            "hash": "16faaf9e140fc3c0d3c60bac4e9120b48d9c6d221ed5c48d8676a995e97a5e7d"
+        },
+        {
+            "date": 1692173005165,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-16-08-14-error.log",
+            "hash": "eaf133230dc6695e68bcf740de8a5943e8c68d4903a99d2dfdf29a4ae266280f"
+        },
+        {
+            "date": 1692176555477,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-16-08-15-error.log",
+            "hash": "8eae410a43b880b0efa254a4cb28a395b6cb1202bda38c8f07b73e5947cc96f9"
+        },
+        {
+            "date": 1692200319758,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-16-08-21-error.log",
+            "hash": "28a85702cb6d5cca38b97471a3c8b55999182cfa0c6a3e5ca572be1d3a344032"
+        },
+        {
+            "date": 1692201662619,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-16-08-22-error.log",
+            "hash": "4482fb607b61555ce72d28caf203d99d27671a32e3f08cc111870af39878d485"
+        },
+        {
+            "date": 1692205239168,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-16-08-23-error.log",
+            "hash": "92db861ac15f6428573a8befdd1871f972283ed7d92de2341e6e0fc17182bd17"
+        },
+        {
+            "date": 1692253081907,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-17-08-12-error.log",
+            "hash": "6a17caf15ebee325e23033283c027cf8f671be688ca39acfba2530511d775f3b"
+        },
+        {
+            "date": 1692273879548,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-17-08-18-error.log",
+            "hash": "14191f81e66529b8e881fbb4877d8f7e26955fdfdfc6434f20d780a301b2e99e"
+        },
+        {
+            "date": 1692332993243,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-18-08-10-error.log",
+            "hash": "5344d02c931bfcbeb9bfb17d1b0378dbad2da0db6a49c3316d6ccbf06e153db3"
+        },
+        {
+            "date": 1692336058490,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-18-08-11-error.log",
+            "hash": "0a87d0312480092bee05e01675b0015c0ce6e1f8c7a8247590fc585f78b147e9"
+        },
+        {
+            "date": 1692338420408,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-18-08-12-error.log",
+            "hash": "bb765b6ef50bf9217ba9c22c3a07bcd9453afd93d3b3aa9a98c704cf17e20a28"
+        }
+    ],
+    "hashType": "sha256"
+}

@@ -1,0 +1,85 @@
+{
+    "keep": {
+        "days": true,
+        "amount": 14
+    },
+    "auditLog": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\.fd8390426fd32c99e27683c30591ea335ada0a9d-audit.json",
+    "files": [
+        {
+            "date": 1692082004361,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-15-08-12-success.log",
+            "hash": "bd3a049b9761b742d7d7a2f02c6b71e5768fc3d417790a77db993073955d1fd0"
+        },
+        {
+            "date": 1692084861509,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-15-08-13-success.log",
+            "hash": "548c94bd14bf54809c8a3e7a55a11f13280c4f2150e1b1435240336d920b040e"
+        },
+        {
+            "date": 1692086719812,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-15-08-14-success.log",
+            "hash": "415687934d77320d7f56984551f205f9016e911c509c7ee2501682c139f4e294"
+        },
+        {
+            "date": 1692166519373,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-16-08-12-success.log",
+            "hash": "6bf31d01ffc3bb65a94636401cc5c01d0c83ec6f3e0a02ae5ed79e41c92a7f4b"
+        },
+        {
+            "date": 1692170427177,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-16-08-13-success.log",
+            "hash": "e68be9083450c41598b7f2911b7dfab234dfac6be5c94d745e46d0cc26d24d95"
+        },
+        {
+            "date": 1692173005163,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-16-08-14-success.log",
+            "hash": "e4e2e7d185ae3106d1d4f80690935e2f615f58c3354fcdd562f9dd430e633048"
+        },
+        {
+            "date": 1692176555475,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-16-08-15-success.log",
+            "hash": "a1a749279384d7f8febe4b643664c3e6a6e077de8ade2a58aebac8c43c7386f9"
+        },
+        {
+            "date": 1692200319752,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-16-08-21-success.log",
+            "hash": "a8a890adc095df0cafce6dc175570886b9c76fc2334f1cd66aa015c1df94facc"
+        },
+        {
+            "date": 1692201662616,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-16-08-22-success.log",
+            "hash": "0c582130125b8a74d2ea4a4dcf7e727f51f2c66cddfeb7625f87c69382d6bf5e"
+        },
+        {
+            "date": 1692205239166,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-16-08-23-success.log",
+            "hash": "138d139e458dd95adab7868a49f68e54476e7e77663166be64604c3035c46cde"
+        },
+        {
+            "date": 1692253081901,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-17-08-12-success.log",
+            "hash": "abcc11e69569e39fe4a6e4bb6bdc2a3b25064670f2f551880447c9820ae39534"
+        },
+        {
+            "date": 1692273879541,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-17-08-18-success.log",
+            "hash": "1a28278af59046ae2a4ac7c5c7e2f032b8c0073ce136a481c36f2d706fe9e86c"
+        },
+        {
+            "date": 1692332993234,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-18-08-10-success.log",
+            "hash": "8ff13aacad3198da0b3f70e7d9fa1cfcd403c4ca7e8743df41d2a2f6c8357e75"
+        },
+        {
+            "date": 1692336058487,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-18-08-11-success.log",
+            "hash": "4a3033509a2e92e04bdd7c4d994ccb0cc5e461dba727775748dd364fbb7f7d43"
+        },
+        {
+            "date": 1692338420406,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-18-08-12-success.log",
+            "hash": "f4080cca062b55f5e12f40fc665b9236ea905e6e3df91ed735ed617787b8168f"
+        }
+    ],
+    "hashType": "sha256"
+}
