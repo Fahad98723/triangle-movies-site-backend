@@ -76,7 +76,82 @@ const createSeriesZodSchema = z.object({
     }),
   }),
 });
+const updateSeriesZodSchema = z.object({
+  body: z.object({
+    series: z.object({
+      title: z
+        .string({
+          required_error: 'Series title is required',
+        })
+        .optional(),
+      overview: z
+        .string({
+          required_error: 'Series overview is required',
+        })
+        .optional(),
+      release_date: z
+        .string({
+          required_error: 'Series release date is required',
+        })
+        .optional(),
+      genres: z
+        .array(z.enum([...AllGenre] as [string, ...string[]]), {
+          required_error: 'Genres are required',
+          invalid_type_error: 'Genres is invalid',
+        })
+        .optional(),
+      seasons: z
+        .array(SeasonSchema, {
+          required_error: 'Seasons are required',
+        })
+        .optional(),
+      poster: z
+        .string({
+          required_error: 'Series poster URL is required',
+        })
+        .optional(),
+      cast: z
+        .array(
+          z.string({
+            required_error: 'Cast members are required',
+          }),
+        )
+        .optional(),
+      screenshots: z
+        .array(
+          z.string({
+            required_error: 'Screenshots are required',
+          }),
+        )
+        .optional(),
+      director: z
+        .string({
+          required_error: 'Director is required',
+        })
+        .optional(),
+      average_rating: z
+        .number({
+          required_error: 'Average rating is required',
+        })
+        .optional(),
+      trailer: z
+        .string({
+          required_error: 'Series trailer URL is required',
+        })
+        .optional(),
+      production_companies: z.array(z.string()).optional(),
+      production_countries: z
+        .array(
+          z.string({
+            required_error: 'Production countries are required',
+          }),
+        )
+        .optional(),
+    }),
+  }),
+});
 
 export const SeriesValidation = {
   createSeriesZodSchema,
+  updateSeriesZodSchema,
 };

@@ -42,3 +42,7 @@ export type ISeries = {
 };
 
 export type SeriesModel = Model<ISeries, object>;
+
+export type ISeriesFilter = {
+  searchName?: string;
+};
