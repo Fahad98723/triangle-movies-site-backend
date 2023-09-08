@@ -15,6 +15,9 @@ const EpisodeSchema = z.object({
   episode_number: z.number({
     required_error: 'Episode number is required',
   }),
+  episode_link: z.number({
+    required_error: 'Episode link is required',
+  }),
 });
 
 const SeasonSchema = z.object({
@@ -36,6 +39,9 @@ const createSeriesZodSchema = z.object({
         required_error: 'Series overview is required',
       }),
       release_date: z.string({
+        required_error: 'Series release date is required',
+      }),
+      release_Year: z.string({
         required_error: 'Series release date is required',
       }),
       genres: z.array(z.enum([...AllGenre] as [string, ...string[]]), {
@@ -92,6 +98,11 @@ const updateSeriesZodSchema = z.object({
       release_date: z
         .string({
           required_error: 'Series release date is required',
+        })
+        .optional(),
+      release_year: z
+        .string({
+          required_error: 'Series release year is required',
         })
         .optional(),
       genres: z

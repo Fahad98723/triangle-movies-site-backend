@@ -64,6 +64,16 @@
             "date": 1693807200264,
             "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-04-09-12-error.log",
             "hash": "5c4a4062591ae629998f9d54a3f6c52823ba090293b615b61f153bc4b7c58eb5"
+        },
+        {
+            "date": 1693886819499,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-05-09-10-error.log",
+            "hash": "0d3e2b7e556122ca9d112998037dd15de6d9e9dc9749e0944a139cef66cc35be"
+        },
+        {
+            "date": 1693890219919,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\errors\\tm-2023-05-09-11-error.log",
+            "hash": "bcd86fe03d5ada66ea958de605d11b3b5bec84e4849f9bee557aa06a7cda0d56"
         }
     ],
     "hashType": "sha256"

@@ -5,6 +5,8 @@ export type IMovie = {
   title: string;
   overview: string;
   release_date: string;
+  release_year: string;
+  link: string;
   genres: [
     | 'Action'
     | 'Adventure'
@@ -41,3 +43,7 @@ export type IMovie = {
 };
 
 export type MovieModel = Model<IMovie, Record<string, unknown>>;
+
+export type IMoviesFilter = {
+  searchName?: string;
+};

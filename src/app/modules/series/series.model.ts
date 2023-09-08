@@ -9,6 +9,7 @@ const episodeSchema = new Schema({
   overview: { type: String, required: true },
   air_date: { type: String, required: true }, // You might want to consider using Date type instead
   episode_number: { type: Number, required: true },
+  episode_link: { type: Number, required: true },
 });
 
 const seasonSchema = new Schema({
@@ -26,6 +27,7 @@ const seriesSchema = new Schema(
     title: { type: String, required: true },
     overview: { type: String, required: true },
     release_date: { type: String, required: true }, // You might want to consider using Date type instead
+    release_year: { type: String, required: true }, // You might want to consider using Date type instead
     genres: { type: [String], required: true, enum: AllGenre },
     seasons: [seasonSchema],
     poster: { type: String, required: true },

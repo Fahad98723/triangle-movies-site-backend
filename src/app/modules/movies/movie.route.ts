@@ -10,5 +10,9 @@ router.post(
   ValidateRequest(MovieValidation.createMovieZodSchema),
   MovieController.addMovie,
 );
+router.get('/', MovieController.getAllMovie);
+router.get('/:id', MovieController.getSingleMovie);
+router.patch('/:id', MovieController.updateMovie);
+router.delete('/:id', MovieController.deleteMovie);
 
 export const MovieRoutes = router;

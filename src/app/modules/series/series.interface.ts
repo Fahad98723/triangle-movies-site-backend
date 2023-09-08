@@ -6,6 +6,7 @@ export type ISeries = {
   seriesid: string;
   overview: string;
   release_date: string; // Required, format: "YYYY-MM-DD"
+  release_year: string; // Required, format: "YYYY-MM-DD"
   genres: [
     | 'Action'
     | 'Adventure'

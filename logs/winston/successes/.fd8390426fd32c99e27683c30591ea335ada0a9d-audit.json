@@ -64,6 +64,16 @@
             "date": 1693807200261,
             "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-04-09-12-success.log",
             "hash": "404db6afbccbc4d054fa057703867d5c15e43f032a224debf4e63dbb9effd0fa"
+        },
+        {
+            "date": 1693886819493,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-05-09-10-success.log",
+            "hash": "4c541e0e835081830116ebd23ff99e76e024031eb4ec6591f41841c9c051a7a8"
+        },
+        {
+            "date": 1693890219916,
+            "name": "E:\\Project\\triangle-movie-site-backend\\logs\\winston\\successes\\tm-2023-05-09-11-success.log",
+            "hash": "3ecb56591031e30f4768efbea3bd3c3c3e3f3eeb312107e968e7463c595dfc9a"
         }
     ],
     "hashType": "sha256"
