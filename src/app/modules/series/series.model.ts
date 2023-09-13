@@ -27,6 +27,16 @@ const seasonSchema = new Schema({
   zipfile: { type: [zipfile], _id: false },
 });
 
+seasonSchema.pre('validate', function (next) {
+  const hasEpisodes = this.episodes && this.episodes.length > 0;
+  const hasZipfile = this.zipfile && this.zipfile.length > 0;
+
+  if (!hasEpisodes && !hasZipfile) {
+    return next(new Error('Either episodes or zipfile must be provided.'));
+  }
+  next();
+});
+
 const seriesSchema = new Schema(
   {
     seriesid: {
