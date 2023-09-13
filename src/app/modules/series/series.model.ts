@@ -9,12 +9,22 @@ const episodeSchema = new Schema({
   overview: { type: String, required: true },
   air_date: { type: String, required: true }, // You might want to consider using Date type instead
   episode_number: { type: Number, required: true },
-  episode_link: { type: Number, required: true },
+  episode_link: { type: String, required: true },
+});
+
+const zipfile = new Schema({
+  caption: { type: String, required: true },
+  links: [
+    {
+      type: String,
+    },
+  ],
 });
 
 const seasonSchema = new Schema({
   number: { type: Number, required: true },
   episodes: [episodeSchema],
+  zipfile: { type: [zipfile], _id: false },
 });
 
 const seriesSchema = new Schema(
@@ -28,16 +38,57 @@ const seriesSchema = new Schema(
     overview: { type: String, required: true },
     release_date: { type: String, required: true }, // You might want to consider using Date type instead
     release_year: { type: String, required: true }, // You might want to consider using Date type instead
-    genres: { type: [String], required: true, enum: AllGenre },
-    seasons: [seasonSchema],
+    genres: {
+      type: [String],
+      validate: {
+        validator: function (array: string[]) {
+          return array && array.length > 0;
+        },
+        message: 'At least one Genres is required.',
+      },
+      enum: AllGenre,
+    },
+    seasons: {
+      type: [seasonSchema],
+      validate: {
+        validator: function (value: object) {
+          return Object.keys(value).length > 0; // Check if the seasons array is not empty
+        },
+        message: 'At least one season is required.',
+      },
+    },
     poster: { type: String, required: true },
-    cast: [String],
+    cast: {
+      type: [String],
+      validate: {
+        validator: function (array: string[]) {
+          return array && array.length > 0;
+        },
+        message: 'At least one cast is required.',
+      },
+    },
     screenshots: [String],
     director: { type: String, required: true },
     average_rating: { type: Number, required: true },
     trailer: { type: String, required: true },
-    production_companies: [String],
-    production_countries: [String],
+    production_companies: {
+      type: [String],
+      validate: {
+        validator: function (array: string[]) {
+          return array && array.length > 0;
+        },
+        message: 'At least one production company is required.',
+      },
+    },
+    production_countries: {
+      type: [String],
+      validate: {
+        validator: function (array: string[]) {
+          return array && array.length > 0;
+        },
+        message: 'At least one production country is required.',
+      },
+    },
   },
   {
     timestamps: true,

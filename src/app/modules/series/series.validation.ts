@@ -15,7 +15,7 @@ const EpisodeSchema = z.object({
   episode_number: z.number({
     required_error: 'Episode number is required',
   }),
-  episode_link: z.number({
+  episode_link: z.string({
     required_error: 'Episode link is required',
   }),
 });
@@ -41,24 +41,30 @@ const createSeriesZodSchema = z.object({
       release_date: z.string({
         required_error: 'Series release date is required',
       }),
-      release_Year: z.string({
+      release_year: z.string({
         required_error: 'Series release date is required',
       }),
-      genres: z.array(z.enum([...AllGenre] as [string, ...string[]]), {
-        required_error: 'Genres are required',
-        invalid_type_error: 'Genres is invalid',
-      }),
-      seasons: z.array(SeasonSchema, {
-        required_error: 'Seasons are required',
-      }),
+      genres: z
+        .array(z.enum([...AllGenre] as [string, ...string[]]), {
+          required_error: 'Genres are required',
+          invalid_type_error: 'Genres is invalid',
+        })
+        .min(1, 'At least one genres is required.'),
+      seasons: z
+        .array(SeasonSchema, {
+          required_error: 'Seasons are required',
+        })
+        .min(1, 'At least one season is required.'),
       poster: z.string({
         required_error: 'Series poster URL is required',
       }),
-      cast: z.array(
-        z.string({
-          required_error: 'Cast members are required',
-        }),
-      ),
+      cast: z
+        .array(
+          z.string({
+            required_error: 'Cast members are required',
+          }),
+        )
+        .min(1, 'At least one season is required.'),
       screenshots: z.array(
         z.string({
           required_error: 'Screenshots are required',
@@ -73,12 +79,16 @@ const createSeriesZodSchema = z.object({
       trailer: z.string({
         required_error: 'Series trailer URL is required',
       }),
-      production_companies: z.array(z.string()),
-      production_countries: z.array(
-        z.string({
-          required_error: 'Production countries are required',
-        }),
-      ),
+      production_companies: z
+        .array(z.string())
+        .min(1, 'At least one production company is required.'),
+      production_countries: z
+        .array(
+          z.string({
+            required_error: 'Production countries are required',
+          }),
+        )
+        .min(1, 'At least one production countries is required.'),
     }),
   }),
 });

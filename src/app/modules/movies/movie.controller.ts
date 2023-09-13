@@ -10,6 +10,8 @@ import { IMovie } from './movie.intereface';
 
 const addMovie = catchAsync(async (req: Request, res: Response) => {
   const { movie } = req.body;
+  console.log(movie, 'checking for errro');
+
   const result = await MovieService.addMovie(movie);
   sendResponse(res, {
     statusCode: httpStatus.OK,

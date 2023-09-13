@@ -10,14 +10,11 @@ import { IPaginationOptions } from '../../../interfaces/pagination';
 
 const addMovie = async (movie: IMovie): Promise<IMovie | null> => {
   const movieId = await generatedMovieId();
-
   movie.movieid = movieId;
-
   const addedMovie = await Movie.create(movie);
   if (!addedMovie) {
     throw new ApiError(400, 'Failed to add Movie');
   }
-
   return addedMovie;
 };
 

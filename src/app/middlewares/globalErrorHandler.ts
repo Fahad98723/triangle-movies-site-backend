@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 /* eslint-disable no-unused-expressions */
-import { ErrorRequestHandler } from 'express';
+import { ErrorRequestHandler, Request, Response } from 'express';
 import { IGenericErrorMessage } from '../../interfaces/errror';
 import handleValidationError from '../../errors/handleValidationError';
 import ApiError from '../../errors/ApiError';
@@ -10,7 +10,11 @@ import { ZodError } from 'zod';
 import handleZodError from '../../errors/handleZodError';
 import handleCastError from '../../errors/handleCastError';
 
-const globalErrorHandler: ErrorRequestHandler = (error, req, res) => {
+const globalErrorHandler: ErrorRequestHandler = (
+  error,
+  req: Request,
+  res: Response,
+) => {
   config.env === 'development'
     ? console.log('🚀 globalErrorHandler', error)
     : errorLogger.error('🚀 globalErrorHandler', error);

@@ -10,7 +10,6 @@ import { seriesSearchableFields } from './series.constant';
 const addSeries = async (series: ISeries): Promise<ISeries> => {
   const serisId = await generatedSeriesId();
   series.seriesid = serisId;
-
   const result = await Series.create(series);
   return result;
 };

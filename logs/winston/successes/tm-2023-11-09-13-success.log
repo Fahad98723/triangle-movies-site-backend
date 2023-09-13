@@ -2,143 +2,119 @@
   message: '✨ Database is connected successfully',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:07:42.041Z'
+  timestamp: '2023-09-11T07:30:27.456Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:07:42.050Z'
+  timestamp: '2023-09-11T07:30:27.460Z'
 }
 {
   message: '✨ Database is connected successfully',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:11:55.159Z'
+  timestamp: '2023-09-11T07:46:59.987Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:11:55.164Z'
+  timestamp: '2023-09-11T07:46:59.992Z'
 }
 {
   message: '✨ Database is connected successfully',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:14:28.168Z'
+  timestamp: '2023-09-11T07:47:14.203Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:14:28.174Z'
+  timestamp: '2023-09-11T07:47:14.208Z'
 }
 {
   message: '✨ Database is connected successfully',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:15:13.442Z'
+  timestamp: '2023-09-11T07:48:38.070Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:15:13.447Z'
+  timestamp: '2023-09-11T07:48:38.075Z'
 }
 {
   message: '✨ Database is connected successfully',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:22:36.660Z'
+  timestamp: '2023-09-11T07:51:11.339Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:22:36.666Z'
+  timestamp: '2023-09-11T07:51:11.344Z'
 }
 {
   message: '✨ Database is connected successfully',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:24:07.484Z'
+  timestamp: '2023-09-11T07:51:17.375Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:24:07.490Z'
+  timestamp: '2023-09-11T07:51:17.379Z'
 }
 {
   message: '✨ Database is connected successfully',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:24:45.898Z'
+  timestamp: '2023-09-11T07:51:48.321Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:24:45.904Z'
+  timestamp: '2023-09-11T07:51:48.325Z'
 }
 {
   message: '✨ Database is connected successfully',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:25:17.097Z'
+  timestamp: '2023-09-11T07:54:55.462Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:25:17.103Z'
+  timestamp: '2023-09-11T07:54:55.467Z'
 }
 {
   message: '✨ Database is connected successfully',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:25:37.235Z'
+  timestamp: '2023-09-11T07:59:31.889Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:25:37.241Z'
+  timestamp: '2023-09-11T07:59:31.894Z'
 }
 {
   message: '✨ Database is connected successfully',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:25:44.804Z'
+  timestamp: '2023-09-11T07:59:50.557Z'
 }
 {
   message: 'Application listening on port 5000',
   level: 'info',
   label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:25:44.810Z'
-}
-{
-  message: '✨ Database is connected successfully',
-  level: 'info',
-  label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:25:54.199Z'
-}
-{
-  message: 'Application listening on port 5000',
-  level: 'info',
-  label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:25:54.205Z'
-}
-{
-  message: '✨ Database is connected successfully',
-  level: 'info',
-  label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:26:11.261Z'
-}
-{
-  message: 'Application listening on port 5000',
-  level: 'info',
-  label: 'Triangle Movies 🎥',
-  timestamp: '2023-08-29T05:26:11.267Z'
+  timestamp: '2023-09-11T07:59:50.562Z'
 }
