@@ -23,7 +23,7 @@ const createMovieZodSchema = z.object({
         required_error: 'Genres are required',
         invalid_type_error: 'Genres is invalid',
       }),
-      runtime: z.number({
+      runtime: z.string({
         required_error: 'Runtime is required',
       }),
       poster: z.string({
@@ -32,6 +32,11 @@ const createMovieZodSchema = z.object({
       cast: z.array(
         z.string({
           required_error: 'Cast members are required',
+        }),
+      ),
+      categories: z.array(
+        z.string({
+          required_error: 'Categories are required',
         }),
       ),
       screenshots: z.array(
@@ -94,7 +99,7 @@ const updateMovieZodSchema = z.object({
         })
         .optional(),
       runtime: z
-        .number({
+        .string({
           required_error: 'Runtime is required',
         })
         .optional(),
@@ -107,6 +112,13 @@ const updateMovieZodSchema = z.object({
         .array(
           z.string({
             required_error: 'Cast members are required',
+          }),
+        )
+        .optional(),
+      categories: z
+        .array(
+          z.string({
+            required_error: 'Categories are required',
           }),
         )
         .optional(),

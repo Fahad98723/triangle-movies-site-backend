@@ -51,11 +51,7 @@ const getSingleMovie = catchAsync(async (req: Request, res: Response) => {
 const updateMovie = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
   const updatedData = req.body.movie;
-
-  console.log(id, updateMovie);
-
   const result = await MovieService.updateMovie(id, updatedData);
-
   sendResponse<IMovie>(res, {
     statusCode: httpStatus.OK,
     success: true,

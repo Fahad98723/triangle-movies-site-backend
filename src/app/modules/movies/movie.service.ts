@@ -5,7 +5,7 @@ import { IGenericResponse } from '../../../interfaces/common';
 import { IMovie, IMoviesFilter } from './movie.intereface';
 import { Movie } from './movie.model';
 import { generatedMovieId } from './movie.utils';
-import { MoviesSearchableFields } from './movie.constant';
+import { MoviesSearchableFields, capitalizeWords } from './movie.constant';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 
 const addMovie = async (movie: IMovie): Promise<IMovie | null> => {
@@ -39,7 +39,7 @@ const getAllMovie = async (
   if (Object.keys(filtersData).length) {
     andConditions.push({
       $and: Object.entries(filtersData).map(([field, value]) => ({
-        [field]: value,
+        [field]: typeof value === 'string' ? capitalizeWords(value) : value,
       })),
     });
   }
@@ -62,7 +62,7 @@ const getAllMovie = async (
     .skip(skip)
     .limit(limit);
 
-  const total = await Movie.countDocuments();
+  const total = await Movie.countDocuments(whereCondition);
 
   return {
     meta: {
