@@ -1,3 +1,4 @@
+import { IMovie } from './movie.intereface';
 import { Movie } from './movie.model';
 
 export const findLastMovieId = async () => {
@@ -17,4 +18,16 @@ export const generatedMovieId = async () => {
     .toString()
     .padStart(5, '0');
   return incrementedId;
+};
+
+export const generatedMovieUrl = async (movie: IMovie) => {
+  const movieUrl = `${movie?.title + ' ' + movie?.release_year}`
+    .trim()
+    .toLowerCase()
+    .replaceAll(' ', '-')
+    .replace(/&/g, 'and')
+    .replaceAll('?', '-')
+    .replaceAll('+', '%2B')
+    .replaceAll('/', '-or-');
+  return movieUrl;
 };

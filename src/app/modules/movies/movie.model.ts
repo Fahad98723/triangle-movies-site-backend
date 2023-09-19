@@ -25,6 +25,7 @@ const movieSchema = new Schema<IMovie>(
     director: { type: String, required: true },
     average_rating: { type: Number, required: true },
     trailer: { type: String, required: true },
+    url: { type: String, required: true, unique: true },
     production_companies: { type: [String], required: true },
     production_countries: { type: [String], required: true },
   },

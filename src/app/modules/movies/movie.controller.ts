@@ -10,8 +10,6 @@ import { IMovie } from './movie.intereface';
 
 const addMovie = catchAsync(async (req: Request, res: Response) => {
   const { movie } = req.body;
-  console.log(movie, 'checking for errro');
-
   const result = await MovieService.addMovie(movie);
   sendResponse(res, {
     statusCode: httpStatus.OK,
@@ -39,6 +37,18 @@ const getAllMovie = catchAsync(async (req: Request, res: Response) => {
 const getSingleMovie = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
   const result = await MovieService.getSingleMovie(id);
+
+  sendResponse<IMovie>(res, {
+    statusCode: httpStatus.OK,
+    success: true,
+    message: 'Movie retrived successfully',
+    data: result,
+  });
+});
+
+const getSingleMovieByUrl = catchAsync(async (req: Request, res: Response) => {
+  const url = req.params.url;
+  const result = await MovieService.getSingleMovieByUrl(url);
 
   sendResponse<IMovie>(res, {
     statusCode: httpStatus.OK,
@@ -79,4 +89,5 @@ export const MovieController = {
   getSingleMovie,
   updateMovie,
   deleteMovie,
+  getSingleMovieByUrl,
 };

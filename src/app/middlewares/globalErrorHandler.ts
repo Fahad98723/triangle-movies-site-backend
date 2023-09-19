@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable no-undef */
 /* eslint-disable no-console */
 /* eslint-disable no-unused-expressions */
-import { ErrorRequestHandler, Request, Response } from 'express';
+import { ErrorRequestHandler, NextFunction, Request, Response } from 'express';
 import { IGenericErrorMessage } from '../../interfaces/errror';
 import handleValidationError from '../../errors/handleValidationError';
 import ApiError from '../../errors/ApiError';
@@ -14,6 +16,7 @@ const globalErrorHandler: ErrorRequestHandler = (
   error,
   req: Request,
   res: Response,
+  next: NextFunction,
 ) => {
   console.log('🚀 globalErrorHandler', error);
 
@@ -40,7 +43,7 @@ const globalErrorHandler: ErrorRequestHandler = (
         message: message,
       },
     ];
-  } else if (error.name === 'CastError') {
+  } else if (error?.name === 'CastError') {
     const simplifiedError = handleCastError(error);
     statusCode = simplifiedError.statusCode;
     message = simplifiedError.message;

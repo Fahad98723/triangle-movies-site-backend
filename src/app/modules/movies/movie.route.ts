@@ -12,6 +12,7 @@ router.post(
 );
 router.get('/', MovieController.getAllMovie);
 router.get('/:id', MovieController.getSingleMovie);
+router.get('/url/:url', MovieController.getSingleMovieByUrl);
 router.patch('/:id', MovieController.updateMovie);
 router.delete('/:id', MovieController.deleteMovie);
 

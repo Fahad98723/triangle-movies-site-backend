@@ -4,13 +4,16 @@ import { paginationHelpers } from '../../../helpers/paginationHelper';
 import { IGenericResponse } from '../../../interfaces/common';
 import { IMovie, IMoviesFilter } from './movie.intereface';
 import { Movie } from './movie.model';
-import { generatedMovieId } from './movie.utils';
+import { generatedMovieId, generatedMovieUrl } from './movie.utils';
 import { MoviesSearchableFields, capitalizeWords } from './movie.constant';
 import { IPaginationOptions } from '../../../interfaces/pagination';
 
 const addMovie = async (movie: IMovie): Promise<IMovie | null> => {
   const movieId = await generatedMovieId();
+  const movieUrl = await generatedMovieUrl(movie);
   movie.movieid = movieId;
+  movie.url = movieUrl;
+
   const addedMovie = await Movie.create(movie);
   if (!addedMovie) {
     throw new ApiError(400, 'Failed to add Movie');
@@ -79,13 +82,24 @@ const getSingleMovie = async (id: string): Promise<IMovie | null> => {
   return result;
 };
 
+const getSingleMovieByUrl = async (url: string): Promise<IMovie | null> => {
+  const result = await Movie.findOne({ url: url });
+  return result;
+};
+
 const updateMovie = async (
   id: string,
   payload: IMovie,
 ): Promise<IMovie | null> => {
+  if (payload && !payload?.url) {
+    const movieUrl = await generatedMovieUrl(payload);
+    payload.url = movieUrl;
+  }
+
   const result = await Movie.findByIdAndUpdate({ _id: id }, payload, {
     new: true,
   });
+
   return result;
 };
 
@@ -100,4 +114,5 @@ export const MovieService = {
   getSingleMovie,
   updateMovie,
   deleteMovie,
+  getSingleMovieByUrl,
 };

@@ -38,6 +38,7 @@ export type IMovie = {
   screenshots: string[];
   director: string;
   average_rating: number;
+  url: string;
   trailer: string; // URL to the official trailer
   production_companies: string[]; // Array of production company names
   production_countries: string[]; // Array of production country names
