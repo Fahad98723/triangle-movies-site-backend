@@ -28,6 +28,7 @@ export const generatedMovieUrl = (movie: IMovie) => {
     .replace(/&/g, 'and')
     .replaceAll('?', '-')
     .replaceAll('+', '%2B')
-    .replaceAll('/', '-or-');
+    .replaceAll('/', '-or-')
+    .replaceAll(':', '%3A');
   return movieUrl;
 };
