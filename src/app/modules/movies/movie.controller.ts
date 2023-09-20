@@ -22,7 +22,6 @@ const addMovie = catchAsync(async (req: Request, res: Response) => {
 const getAllMovie = catchAsync(async (req: Request, res: Response) => {
   const filters = pick(req.query, MoviesFilterableFields);
   const paginationOptions = pick(req.query, paginationFields);
-
   const result = await MovieService.getAllMovie(filters, paginationOptions);
 
   sendResponse<IMovie[]>(res, {

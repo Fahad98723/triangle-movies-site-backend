@@ -10,7 +10,7 @@ import { IPaginationOptions } from '../../../interfaces/pagination';
 
 const addMovie = async (movie: IMovie): Promise<IMovie | null> => {
   const movieId = await generatedMovieId();
-  const movieUrl = await generatedMovieUrl(movie);
+  const movieUrl = generatedMovieUrl(movie);
   movie.movieid = movieId;
   movie.url = movieUrl;
 
@@ -47,7 +47,7 @@ const getAllMovie = async (
     });
   }
 
-  console.log(Object.keys(filtersData), Object.entries(filtersData));
+  // console.log(Object.keys(filtersData), Object.entries(filtersData));
 
   const { page, limit, skip, sortBy, sortOrder } =
     paginationHelpers.calculatePagination(paginationOptions);
@@ -92,9 +92,11 @@ const updateMovie = async (
   payload: IMovie,
 ): Promise<IMovie | null> => {
   if (payload && !payload?.url) {
-    const movieUrl = await generatedMovieUrl(payload);
+    const movieUrl = generatedMovieUrl(payload);
     payload.url = movieUrl;
   }
+
+  console.log(payload);
 
   const result = await Movie.findByIdAndUpdate({ _id: id }, payload, {
     new: true,

@@ -20,7 +20,7 @@ export const generatedMovieId = async () => {
   return incrementedId;
 };
 
-export const generatedMovieUrl = async (movie: IMovie) => {
+export const generatedMovieUrl = (movie: IMovie) => {
   const movieUrl = `${movie?.title + ' ' + movie?.release_year}`
     .trim()
     .toLowerCase()

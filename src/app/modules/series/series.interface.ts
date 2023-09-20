@@ -11,6 +11,7 @@ export type ISeries = {
     | 'Action'
     | 'Adventure'
     | 'Animation'
+    | 'Anime'
     | 'Comedy'
     | 'Crime'
     | 'Drama'

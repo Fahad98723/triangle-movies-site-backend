@@ -11,6 +11,7 @@ export type IMovie = {
     | 'Action'
     | 'Adventure'
     | 'Animation'
+    | 'Anime'
     | 'Comedy'
     | 'Crime'
     | 'Drama'

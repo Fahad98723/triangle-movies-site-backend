@@ -27,6 +27,7 @@ export const AllGenre = [
   'Action',
   'Adventure',
   'Animation',
+  'Anime',
   'Comedy',
   'Crime',
   'Drama',
