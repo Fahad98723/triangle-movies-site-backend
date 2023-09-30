@@ -35,8 +35,9 @@ export type ISeries = {
   seasons: Season[]; // Array of season objects
   poster: string; // URL to the poster image
   cast: string[]; // Array of cast member names
+  url: string;
   screenshots: string[];
-  director: string;
+  director: string[];
   average_rating: number;
   trailer: string; // URL to the official trailer
   production_companies?: string[]; // Array of production company names

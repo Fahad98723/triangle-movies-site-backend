@@ -14,11 +14,9 @@ const episodeSchema = new Schema({
 
 const zipfile = new Schema({
   caption: { type: String, required: true },
-  links: [
-    {
-      type: String,
-    },
-  ],
+  links: {
+    type: String,
+  },
 });
 
 const seasonSchema = new Schema({
@@ -45,6 +43,7 @@ const seriesSchema = new Schema(
       unique: true,
     },
     title: { type: String, required: true },
+    url: { type: String, unique: true },
     overview: { type: String, required: true },
     release_date: { type: String, required: true }, // You might want to consider using Date type instead
     release_year: { type: String, required: true }, // You might want to consider using Date type instead
@@ -78,7 +77,15 @@ const seriesSchema = new Schema(
       },
     },
     screenshots: [String],
-    director: { type: String, required: true },
+    director: {
+      type: [String],
+      validate: {
+        validator: function (array: string[]) {
+          return array && array.length > 0;
+        },
+        message: 'At least one director  is required.',
+      },
+    },
     average_rating: { type: Number, required: true },
     trailer: { type: String, required: true },
     production_companies: {

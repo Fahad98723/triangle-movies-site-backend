@@ -1,5 +1,6 @@
 import { z } from 'zod';
 import { AllGenre } from '../../../shared/allGenre';
+import { Season } from '../../../interfaces/season';
 //req validation
 
 const EpisodeSchema = z.object({
@@ -20,14 +21,30 @@ const EpisodeSchema = z.object({
   }),
 });
 
+const ZipFileSchema = z.object({
+  caption: z.string({}),
+  links: z.string({}),
+});
+
 const SeasonSchema = z.object({
   number: z.number({
     required_error: 'Season number is required',
   }),
-  episodes: z.array(EpisodeSchema, {
-    required_error: 'Episodes are required',
-  }),
+  episodes: z.array(EpisodeSchema).optional(),
+  zipfile: z.array(ZipFileSchema).optional(),
 });
+
+// Custom pre-validation function for SeasonSchema
+export function preValidateSeasonSchema(data: Season) {
+  console.log(data);
+
+  const hasEpisodes = data.episodes && data.episodes.length > 0;
+  const hasZipfile = data.zipfile && data.zipfile.length > 0;
+
+  if (!hasEpisodes && !hasZipfile) {
+    throw new Error('Either episodes or zipfiles must be provided.');
+  }
+}
 
 const createSeriesZodSchema = z.object({
   body: z.object({
@@ -70,9 +87,13 @@ const createSeriesZodSchema = z.object({
           required_error: 'Screenshots are required',
         }),
       ),
-      director: z.string({
-        required_error: 'Director is required',
-      }),
+      director: z
+        .array(
+          z.string({
+            required_error: 'Production countries are required',
+          }),
+        )
+        .min(1, 'At least one Director countries is required.'),
       average_rating: z.number({
         required_error: 'Average rating is required',
       }),

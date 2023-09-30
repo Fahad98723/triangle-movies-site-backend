@@ -9,6 +9,17 @@ import { seriesSearchableFields } from './series.constant';
 
 const addSeries = async (series: ISeries): Promise<ISeries> => {
   const serisId = await generatedSeriesId();
+  if (!series.url) {
+    series.url = `${series?.title}`
+      .trim()
+      .toLowerCase()
+      .replaceAll(' ', '-')
+      .replace(/&/g, 'and')
+      .replaceAll('?', '-')
+      .replaceAll('+', '%2B')
+      .replaceAll('/', '-or-')
+      .replaceAll(':', '%3A');
+  }
   series.seriesid = serisId;
   const result = await Series.create(series);
   return result;
@@ -88,6 +99,11 @@ const getSingleSeries = async (id: string): Promise<ISeries | null> => {
   return result;
 };
 
+const getSingleSeriesByUrl = async (url: string): Promise<ISeries | null> => {
+  const result = await Series.findOne({ url: url });
+  return result;
+};
+
 const updateSeries = async (
   id: string,
   payload: ISeries,
@@ -109,4 +125,5 @@ export const SeriesService = {
   getSingleSeries,
   updateSeries,
   deleteSeries,
+  getSingleSeriesByUrl,
 };

@@ -12,6 +12,7 @@ router.post(
 );
 
 router.get('/:id', SeriesController.getSingleSeries);
+router.get('/url/:url', SeriesController.getSingleSeriesByUrl);
 router.patch(
   '/:id',
   ValidateRequest(SeriesValidation.updateSeriesZodSchema),
