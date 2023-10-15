@@ -23,7 +23,7 @@ const EpisodeSchema = z.object({
 
 const ZipFileSchema = z.object({
   caption: z.string({}),
-  links: z.string({}),
+  link: z.string({}),
 });
 
 const SeasonSchema = z.object({
@@ -75,13 +75,7 @@ const createSeriesZodSchema = z.object({
       poster: z.string({
         required_error: 'Series poster URL is required',
       }),
-      cast: z
-        .array(
-          z.string({
-            required_error: 'Cast members are required',
-          }),
-        )
-        .min(1, 'At least one season is required.'),
+      cast: z.array(z.string()),
       screenshots: z.array(
         z.string({
           required_error: 'Screenshots are required',

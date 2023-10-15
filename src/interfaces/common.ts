@@ -11,6 +11,7 @@ export type IGenericResponse<T> = {
     page?: number;
     limit?: number;
     total?: number;
+    count?: number;
   };
   data: T;
 };

@@ -14,7 +14,7 @@ const episodeSchema = new Schema({
 
 const zipfile = new Schema({
   caption: { type: String, required: true },
-  links: {
+  link: {
     type: String,
   },
 });
@@ -69,12 +69,6 @@ const seriesSchema = new Schema(
     poster: { type: String, required: true },
     cast: {
       type: [String],
-      validate: {
-        validator: function (array: string[]) {
-          return array && array.length > 0;
-        },
-        message: 'At least one cast is required.',
-      },
     },
     screenshots: [String],
     director: {

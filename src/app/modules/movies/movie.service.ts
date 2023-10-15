@@ -47,8 +47,6 @@ const getAllMovie = async (
     });
   }
 
-  // console.log(Object.keys(filtersData), Object.entries(filtersData));
-
   const { page, limit, skip, sortBy, sortOrder } =
     paginationHelpers.calculatePagination(paginationOptions);
 
@@ -65,13 +63,17 @@ const getAllMovie = async (
     .skip(skip)
     .limit(limit);
 
-  const total = await Movie.countDocuments(whereCondition);
+  const resultCount = Movie.find(whereCondition).sort(sortConditions);
+
+  const total = await Movie.countDocuments();
+  const count = await resultCount.countDocuments();
 
   return {
     meta: {
       page,
       limit,
       total,
+      count,
     },
     data: result,
   };
@@ -83,6 +85,8 @@ const getSingleMovie = async (id: string): Promise<IMovie | null> => {
 };
 
 const getSingleMovieByUrl = async (url: string): Promise<IMovie | null> => {
+  console.log(url);
+
   const result = await Movie.findOne({ url: url });
   return result;
 };
